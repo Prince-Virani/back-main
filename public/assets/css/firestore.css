@@ -1,0 +1,835 @@
+.firebase-container {
+    max-width: 1540px;
+    margin-top: 30px;
+    background: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
+}
+.firebase-breadcrumb {
+    background: #2d2d2d;
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #e0e0e0;
+    border-bottom: 1px solid #404040;
+}
+
+.breadcrumb-item {
+    cursor: pointer;
+    color: #64b5f6;
+}
+
+.breadcrumb-separator {
+    margin: 0 8px;
+    color: #888;
+}
+
+.firebase-interface {
+    display: flex;
+    min-height: 600px;
+}
+
+.firebase-left-panel {
+    width: 330px;
+    background: #242424;
+    border-right: 1px solid #404040;
+}
+
+.firebase-middle-panel {
+    width: 340px;
+    background: #242424;
+    border-right: 1px solid #404040;
+}
+
+.firebase-right-panel {
+    width: 810px;
+    background: #1a1a1a;
+}
+
+.firebase-panel-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid #404040;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #2d2d2d;
+    min-height: 56px;
+}
+
+.panel-title {
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.panel-icon {
+    margin-right: 8px;
+}
+
+.panel-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.firebase-btn-icon {
+    background: none;
+    border: none;
+    color: #64b5f6;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.firebase-btn-icon:hover {
+    background: #333;
+    color: #81c784;
+}
+
+.start-collection-btn,
+.add-document-btn {
+    padding: 12px 20px;
+    color: #64b5f6;
+    cursor: pointer;
+    font-size: 14px;
+    border-bottom: 1px solid #404040;
+    transition: all 0.2s ease;
+}
+
+.start-collection-btn:hover,
+.add-document-btn:hover {
+    background: #333;
+    color: #81c784;
+}
+
+.collection-item {
+    padding: 12px 20px;
+    cursor: pointer;
+    color: #b0b0b0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-left: 3px solid transparent;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.collection-item:hover {
+    background: #333;
+    color: #fff;
+}
+
+.collection-item.active {
+    background: #1976d2;
+    color: #fff;
+    border-left-color: #64b5f6;
+}
+
+.collection-item::before {
+    content: "📦";
+    margin-right: 8px;
+    font-size: 12px;
+}
+
+.collection-name {
+    flex: 1;
+}
+
+.collection-arrow {
+    color: #888;
+    font-size: 12px;
+    transition: transform 0.2s ease;
+}
+
+.collection-item.active .collection-arrow {
+    transform: rotate(90deg);
+}
+
+.document-item {
+    padding: 10px 16px;
+    cursor: pointer;
+    color: #b0b0b0;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #333;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.document-item:hover {
+    background: #333;
+    color: #fff;
+}
+
+.document-item.active {
+    background: #1976d2 !important;
+    color: #fff !important;
+    border-left: 3px solid #64b5f6;
+}
+
+.document-name {
+    flex: 1;
+}
+
+.document-arrow {
+    color: #888;
+    font-size: 12px;
+    transition: transform 0.2s ease;
+}
+
+.document-item.active .document-arrow {
+    transform: rotate(90deg);
+    color: #fff;
+}
+
+.no-collection-selected,
+.no-document-selected {
+    text-align: center;
+    color: #888;
+    margin-top: 50px;
+    padding: 20px;
+    font-style: italic;
+}
+
+.document-content {
+    padding: 16px;
+}
+
+.field-row {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #333;
+    transition: background 0.2s ease;
+}
+
+.field-row:hover {
+    background: rgba(100, 181, 246, 0.05);
+}
+
+.field-name {
+    width: 140px;
+    color: #64b5f6;
+    font-weight: 500;
+    margin-right: 12px;
+    font-size: 13px;
+    word-break: break-word;
+}
+
+.field-value {
+    flex: 1;
+}
+
+.field-input {
+    background: #333;
+    border: 1px solid #555;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 13px;
+    transition: all 0.2s ease;
+}
+
+.field-input:focus {
+    outline: none;
+    border-color: #64b5f6;
+    box-shadow: 0 0 0 2px rgba(100, 181, 246, 0.2);
+    background: #3a3a3a;
+}
+
+.firebase-modal-large {
+    background: #2d2d2d;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+}
+
+.firebase-modal-content {
+    padding: 40px;
+}
+
+.firebase-modal-title {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 32px;
+    color: #fff;
+}
+
+.firebase-steps {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.step-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.step-item.active .step-number {
+    background: #1976d2;
+    color: white;
+}
+
+.step-number {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #555;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.step-text {
+    color: #e0e0e0;
+    font-size: 14px;
+}
+
+.step-separator {
+    width: 60px;
+    height: 1px;
+    background: #555;
+    margin: 0 16px;
+}
+
+.firebase-form-section {
+    margin-bottom: 40px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.firebase-label {
+    display: block;
+    color: #e0e0e0;
+    font-size: 14px;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.firebase-label-small {
+    display: block;
+    color: #b0b0b0;
+    font-size: 12px;
+    margin-bottom: 4px;
+    font-weight: 400;
+}
+
+.firebase-path {
+    background: #1a1a1a;
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 12px 16px;
+    color: #64b5f6;
+    font-family: "Consolas", "Monaco", monospace;
+    font-size: 14px;
+}
+
+.firebase-input-large {
+    width: 100%;
+    background: #1a1a1a;
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 12px 16px;
+    color: #fff;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.firebase-input-large:focus {
+    outline: none;
+    border-color: #1976d2;
+    box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.2);
+}
+
+.firebase-input-group {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.firebase-btn-link {
+    background: none;
+    border: none;
+    color: #64b5f6;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.firebase-btn-link:hover {
+    color: #81c784;
+}
+
+.firebase-required {
+    color: #f44336;
+    font-size: 12px;
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.firebase-info-icon {
+    color: #888;
+    font-size: 14px;
+    cursor: help;
+}
+
+.firebase-field-section {
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 16px;
+    background: #1a1a1a;
+}
+
+.firebase-field-row {
+    display: flex;
+    gap: 12px;
+    align-items: end;
+    margin-bottom: 16px;
+}
+
+.firebase-field-input {
+    flex: 1;
+}
+
+.firebase-field-type {
+    width: 120px;
+}
+
+.firebase-input-medium {
+    width: 100%;
+    background: #333;
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 8px 12px;
+    color: #fff;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.firebase-input-medium:focus {
+    outline: none;
+    border-color: #64b5f6;
+    box-shadow: 0 0 0 2px rgba(100, 181, 246, 0.1);
+}
+
+.firebase-select {
+    width: 100%;
+    background: #333;
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 8px 12px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.firebase-btn-remove {
+    background: none;
+    border: none;
+    color: #f44336;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.firebase-btn-remove:hover {
+    background: rgba(244, 67, 54, 0.1);
+    transform: scale(1.1);
+}
+
+.firebase-field-value {
+    margin-bottom: 16px;
+}
+
+.firebase-textarea {
+    width: 100%;
+    background: #333;
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 12px;
+    color: #fff;
+    font-size: 14px;
+    resize: vertical;
+    font-family: "Consolas", "Monaco", monospace;
+    transition: all 0.2s ease;
+}
+
+.firebase-textarea:focus {
+    outline: none;
+    border-color: #64b5f6;
+    box-shadow: 0 0 0 2px rgba(100, 181, 246, 0.1);
+}
+
+.firebase-btn-add-field {
+    background: none;
+    border: none;
+    color: #64b5f6;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.firebase-btn-add-field:hover {
+    color: #81c784;
+    text-decoration: underline;
+}
+
+.firebase-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding-top: 24px;
+    border-top: 1px solid #555;
+}
+
+.firebase-btn-primary {
+    background: #1976d2;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.firebase-btn-primary:hover {
+    background: #1565c0;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(25, 118, 210, 0.3);
+}
+
+.firebase-btn-secondary {
+    background: none;
+    color: #e0e0e0;
+    border: 1px solid #555;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.firebase-btn-secondary:hover {
+    background: #333;
+    border-color: #777;
+}
+
+.document-field-item {
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #404040;
+}
+
+.document-field-item:last-child {
+    border-bottom: none;
+}
+
+.geopoint-inputs {
+    display: flex;
+    gap: 12px;
+}
+
+.geopoint-input {
+    flex: 1;
+}
+
+.array-container {
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 12px;
+    background: #333;
+    margin-top: 8px;
+}
+
+.array-element {
+    margin-bottom: 12px;
+    padding: 12px;
+    background: #2a2a2a;
+    border-radius: 4px;
+    border: 1px solid #444;
+    transition: all 0.2s ease;
+}
+
+.array-element:hover {
+    border-color: #64b5f6;
+}
+
+.array-element-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.array-index {
+    background: #555;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    min-width: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.firebase-select-small {
+    background: #333;
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 4px 8px;
+    color: #fff;
+    font-size: 12px;
+    width: 80px;
+    cursor: pointer;
+}
+
+.firebase-input-small {
+    background: #333;
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 6px 8px;
+    color: #fff;
+    font-size: 12px;
+    flex: 1;
+    transition: all 0.2s ease;
+}
+
+.firebase-input-small:focus {
+    outline: none;
+    border-color: #64b5f6;
+    box-shadow: 0 0 0 1px rgba(100, 181, 246, 0.2);
+}
+
+.firebase-btn-remove-small {
+    background: none;
+    border: none;
+    color: #f44336;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 4px 6px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.firebase-btn-remove-small:hover {
+    background: rgba(244, 67, 54, 0.1);
+    transform: scale(1.1);
+}
+
+.firebase-field-modal {
+    padding: 24px 40px;
+}
+
+.firebase-field-form {
+    margin-bottom: 32px;
+}
+
+.firebase-input-bordered {
+    width: 100%;
+    background: #1a1a1a;
+    border: 2px solid #64b5f6;
+    border-radius: 4px;
+    padding: 12px 16px;
+    color: #fff;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.firebase-select-bordered {
+    width: 100%;
+    background: #1a1a1a;
+    border: 2px solid #555;
+    border-radius: 4px;
+    padding: 12px 16px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.firebase-textarea-bordered {
+    width: 100%;
+    background: #1a1a1a;
+    border: 2px solid #555;
+    border-radius: 4px;
+    padding: 12px 16px;
+    color: #fff;
+    font-size: 14px;
+    resize: vertical;
+    font-family: "Consolas", "Monaco", monospace;
+    transition: all 0.2s ease;
+}
+
+.firebase-textarea-bordered:focus,
+.firebase-input-bordered:focus,
+.firebase-select-bordered:focus {
+    outline: none;
+    border-color: #64b5f6;
+    box-shadow: 0 0 0 2px rgba(100, 181, 246, 0.1);
+}
+
+.collections-list,
+.documents-list {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.collections-list::-webkit-scrollbar,
+.documents-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.collections-list::-webkit-scrollbar-track,
+.documents-list::-webkit-scrollbar-track {
+    background: #333;
+}
+
+.collections-list::-webkit-scrollbar-thumb,
+.documents-list::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 3px;
+}
+
+.collections-list::-webkit-scrollbar-thumb:hover,
+.documents-list::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}
+
+/* Mobile Responsive Enhancements */
+@media (max-width: 768px) {
+    .firebase-interface {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .firebase-left-panel,
+    .firebase-middle-panel,
+    .firebase-right-panel {
+        width: 100%;
+        border-right: none;
+    }
+
+    .firebase-panel-header,
+    .firebase-input-group,
+    .field-row,
+    .firebase-field-row,
+    .geopoint-inputs,
+    .array-element-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .firebase-btn-primary,
+    .firebase-btn-secondary,
+    .firebase-btn-icon {
+        width: 100%;
+    }
+
+    .firebase-breadcrumb {
+        font-size: 12px;
+        white-space: nowrap;
+        overflow-x: auto;
+    }
+
+    .panel-title {
+        font-size: 14px;
+        flex-wrap: wrap;
+    }
+}
+
+.field-input,
+.firebase-path,
+.firebase-input-large,
+.firebase-textarea {
+    overflow-x: auto;
+    word-break: break-word;
+}
+
+.resizer {
+    width: 6px;
+    cursor: col-resize;
+    background: #444;
+    z-index: 10;
+}
+
+/* Breadcrumb styling */
+.firebase-breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #2d2d2d;
+    padding: 12px 20px;
+    border-radius: 8px 8px 0 0;
+}
+
+.breadcrumb-items {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    overflow-x: auto;
+    flex-wrap: wrap;
+}
+
+.breadcrumb-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Toggle buttons styling */
+.mobile-panel-toggle button {
+    background: #333;
+    border: none;
+    color: #64b5f6;
+    font-size: 16px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+}
+
+.mobile-panel-toggle button:hover {
+    background: #444;
+}
+
+@media (max-width: 768px) {
+    .mobile-panel-toggle {
+        display: flex;
+        position: sticky;
+        bottom: 0;
+        background: #1a1a1a;
+        z-index: 999;
+        padding: 8px;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    /* Ensure resizer is visible on mobile */
+    .resizer {
+        display: block;
+    }
+}

@@ -1,0 +1,49 @@
+.note-btn-group .dropdown-toggle::after {
+    display: none !important;  /* Hide Bootstrap's default dropdown arrow */
+}
+.note-editor {
+    background-color: #ffffff !important; /* Set a white background */
+    border: 1px solid #ddd !important;
+}
+
+.note-editable {
+    background-color: #ffffff !important; /* Set the editor's background */
+    color: #000 !important; /* Ensure text is visible */
+    min-height: 300px !important;
+    padding: 15px !important;
+}
+
+.card {
+    border-radius: 12px;
+    overflow: hidden;
+    border: none;
+}
+.card-header {
+    font-size: 22px;
+    font-weight: bold;
+    border-bottom: none;
+}
+.form-label {
+    font-weight: 600;
+    font-size: 16px;
+}
+.form-control {
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 12px;
+}
+.btn {
+    border-radius: 8px;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+}
+.btn-success:hover, .btn-outline-secondary:hover {
+    transform: scale(1.05);
+}
+.img-thumbnail {
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+.img-thumbnail:hover {
+    transform: scale(1.05);
+}
